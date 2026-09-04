@@ -1,0 +1,21 @@
+{
+  "name": "mandap-bazaar",
+  "version": "1.0.0",
+  "description": "Event-vendor marketplace — Node.js, Express, SQLite, React",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n server,client -c blue,green \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "seed": "npm run seed --prefix server",
+    "build": "npm run build:server && npm run build:client",
+    "build:server": "npm run build --prefix server",
+    "build:client": "npm run build --prefix client",
+    "start:server": "npm run start --prefix server",
+    "typecheck": "npm run typecheck --prefix server && npm exec --prefix client -- tsc --noEmit -p client/tsconfig.app.json"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

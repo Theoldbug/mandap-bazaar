@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Builds
+dist/
+dist-ssr/
+
+# Environment files — never commit secrets
+.env
+.env.*
+!.env.example
+
+# SQLite database files
+*.db
+*.db-wal
+*.db-shm
+server/data/
+
+# Logs
+logs/
+*.log
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
